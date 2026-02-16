@@ -6,39 +6,36 @@ git branch -M main
 git remote add origin https://github.com/Mariana-DeBerti/Final-IO.git
 git push -u origin main
 <!doctype html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Presentación</title>
 
-		<title>Programacion lineal</title>
+  <!-- Reveal.js desde CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/black.css">
+</head>
 
-		<link rel="stylesheet" href="reset.css">
-		<link rel="stylesheet" href="reveal.css">
-		<link rel="stylesheet" href="black.css">
+<body>
+<div class="reveal">
+  <div class="slides">
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="monokai.css">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section><p>Programación lineal</p><p> Mariana De Berti -2026 </p></section>
-				<section data-visibility="hidden"> <p><b>¿Qué es la programación lineal?</b></p><p>Es una técnica matemática para maximizar o minimizar una función lineal sujeta a restricciones lineales.</p></section>
-				<section><p><b> Elementos de la programación lineal</b></p><p><b>Función objetivo:</b> Expresion que se desea maximizar o minimizar</p><p><b> Variables de decisión:</b> Desconocidas que se determinarán en el modelo</p><p><b> Restricciones:</b> Condiciones que limitan las decisiones</p></section>
-			</div>
-		</div>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
-				showHiddenSlides: true,
+    <section>
+      <h2>Programación Lineal</h2>
+      <p>Definición y aplicaciones</p>
+    </section>
 
-				slideNumber: 'c/t',
+    <section>
+      <h3>Ejemplo</h3>
+      <p>Maximizar ganancias...</p>
+    </section>
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.js"></script>
+<script>
+  Reveal.initialize({ hash: true });
+</script>
+</body>
+</html>
