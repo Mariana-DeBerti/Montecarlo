@@ -28,7 +28,7 @@ git push -u origin main
   <section>
     <div class="flecha-abajo">
       <i class="fas fa-chevron-down"></i>
-    <h2>¿Qué es la simulacion de Monte Carlo?</h2>
+  <h2>¿Qué es la simulacion de Monte Carlo?</h2>
   <p>Es una técnica estadística que predice los posibles resultados de un evento incierto mediante el uso de muestreo aleatorio </p>
   <p>Al simular miles de escenarios con variables aleatorias, permite evaluar riesgos y posibilidades</p>
     </div>
@@ -37,12 +37,12 @@ git push -u origin main
     <div class="flecha-abajo">
       <i class="fas fa-chevron-down"></i>
     <h1>¿En qué consiste?</h1>
-   <ul>
+   <ol>
      <li class="fragment">Definir un modelo matemático que representa el sistema que se quiere analizar</li>
      <li class="fragment"> Generar números aleatorios para simular las variables de entrada del modelo</li>
      <li class="fragment">Ejecutar el modelo con los valores aleatorios y obtener resultados</li>
      <li class="fragment"> Repetir el proces miles o millones de veces para obtener una distribución de resultados posibles</li>
-   </ul>
+   </ol>
     </div>
   </section>
   <Section>
@@ -56,13 +56,72 @@ git push -u origin main
     </ul>
   </Section>
 </section>
-
 <section>
-  <h1>Ejemplo </h1>
-  <h2>Simulación de Montecarlo aplicada al óptimo agronomico y económico</h2>
-
+  <h2>Ejemplo </h2>
+  <h3> Optimo agronómico vs. óptimo económico</h3>
 </section>
-
+  <section>
+    <p>El rendimiento del cultivo depende de variables inciertas tales como: </p>
+    <ul>
+      <li>- Clima </li>
+      <li>- Calidad del suelo </li>
+      <li>- Precipitaciones </li>
+      <li>- Respuesta del cultivo</li>
+      <p>No podemos predecir con exactitud el rendimiento final. </p>
+      <p>Necesitamos estimar qué nivel de fertilización maximiza:</p>
+      <ul>
+        <li> - La producción (Optimo agronómico)</li>
+        <li> - La ganancia económica (Optimo económico)</li>
+      </ul>
+    </ul>
+  </section>
+<section>
+  <h3>Optimo agronómico vs económico </h3>
+  <p><b> Óptimo agronómico:</b> Es la dosis de fertilizante que maximiza el rendimiento del cultivo</p>
+  <p><b>Óptimo económico:</b> Es la dosis que maximiza la ganancia, considerando:</p>
+  <ul>
+    <li>- Costo del fertilizante</li>
+    <li>- Precio del cultivo</li>
+    <li>- Rendimiento obtenido</li>
+    <p>Más producción no siempre es sinónimo de mayor ganancia.</p>
+  </ul>
+</section>
+  <section>
+    <h3>Objetivo de la simulación</h3>
+    <p>Simular distintos escenarios para estimar:</p>
+    <ul>
+      <li>El rendimiento esperado del cultivo</li>
+      <li>La dosis de fertilizante que maximiza la producción</li>
+      <li>La dosis que maximiza la ganancia económica</li>
+    </ul>
+    <p> Comparar el óptimo agronómico con el óptimo económico</p>
+  </section>
+<section>
+  <h3>Dosis de fertilizante en trigo</h3>
+  <p>Supongamos que evaluamos tres dosis de fertilizantes:</p>
+  <table>
+    <thead>
+      <tr> Dosis (Kg/ha) </tr>
+      <tr>Rendimiento esperado (tn/ha)</tr>
+    </thead>
+    <tr>
+      <td>50</td>
+      <td>3,2</td>
+    </tr>
+    <tr>
+      <td>100</td>
+      <td>4,0</td>
+    </tr>
+    <tr>
+      <td>150</td>
+      <td>4,3</td>
+    </tr>
+  </table>
+  <p>Datos económicos:</p>
+  <p>Precio del trigo: 200 USD/th</p>
+  <p>Costo del fertilizante: 1 USD/kg</p>
+</section>
+  
 </div>
 </div>
 
