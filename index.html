@@ -26,16 +26,11 @@ git push -u origin main
 
 <section>
   <section>
-    <div class="flecha-abajo">
-      <i class="fas fa-chevron-down"></i>
-  <h3>¿Qué es la simulacion de Monte Carlo?</h3>
+   <h3>¿Qué es la simulacion de Monte Carlo?</h3>
   <p>Es una técnica estadística que predice los posibles resultados de un evento incierto mediante el uso de muestreo aleatorio </p>
   <p>Al simular miles de escenarios con variables aleatorias, permite evaluar riesgos y posibilidades</p>
-    </div>
   </section>
   <section id="fragmentos">
-    <div class="flecha-abajo">
-      <i class="fas fa-chevron-down"></i>
     <h3>¿En qué consiste?</h3>
    <ol>
      <li class="fragment">Definir un modelo matemático que representa el sistema que se quiere analizar</li>
@@ -43,11 +38,9 @@ git push -u origin main
      <li class="fragment">Ejecutar el modelo con los valores aleatorios y obtener resultados</li>
      <li class="fragment"> Repetir el proces miles o millones de veces para obtener una distribución de resultados posibles</li>
    </ol>
-    </div>
   </section>
   <Section>
-      <i class="fas fa-chevron-down"></i>
-    <h3>¿Para qué se utiliza?</h3>
+     <h3>¿Para qué se utiliza?</h3>
     <ul>
     <li>Evaluar riesgos, incertidumbres en proyectos y decisiones</li>
       <li>Analizar sistemas complejos y no lineales</li>
@@ -99,7 +92,6 @@ git push -u origin main
 <section>
   <h3>Dosis de fertilizante en trigo</h3>
   <p>Supongamos que evaluamos tres dosis de fertilizantes:</p>
-  <span class="fragment highlight-white">
   <table>
     <tr>
       <td> Dosis (Kg/ha) </td>
@@ -107,22 +99,94 @@ git push -u origin main
     </tr>
     <tr>
       <td>50</td>
-      <td>3,2</td>
+      <td>2,8 - 3,6</td>
     </tr>
     <tr>
       <td>100</td>
-      <td>4,0</td>
+      <td>3,5 - 4,5</td>
     </tr>
     <tr>
       <td>150</td>
-      <td>4,3</td>
+      <td>3,8 - 4,8</td>
     </tr>
   </table>
-  </span>
-  <p>Datos económicos:</p>
-  <p>Precio del trigo: 200 USD/th</p>
-  <p>Costo del fertilizante: 1 USD/kg</p>
+  <p>Usaremos valores aleatorios dentro de estos rangos</p>
 </section>
+  <section>
+    <h3>Simulación de escenatios</h3>
+    <p>Ejemplo de rendimientos aleatorios</p>
+    <p>simulamos 10 escenarios climáticos</p>
+    <section>
+    <table>
+      <tr>
+        <td><b>Escenatio</b></td>
+        <td><b>50 kg</b></td>
+        <td><b>100 kg</b></td>
+        <td><b>150kg</b></td>     
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>3,1</td>
+        <td>4,2</td>
+        <td>4.4</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>2,9</td>
+        <td>3,7</td>
+        <td>4,1</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>3,5</td>
+        <td>4,3</td>
+        <td>4,6</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>3,0</td>
+        <td>3,8</td>
+        <td>4,0</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>3,2</td>
+        <td>4,1</td>
+        <td>4,5</td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td>2,8</td>
+        <td>3,6</td>
+        <td>3,9</td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td>3,4</td>
+        <td>4,4</td>
+        <td>4,7</td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td>3,3</td>
+      <td>4,0</td>
+        <td>4,3</td>
+      </tr>
+      <tr>
+        <td>9</td>
+        <td>3,0</td>
+        <td>3,9</td>
+        <td>4,2</td>
+      </tr>
+      <tr>
+        <td>10</td>
+        <td>3,6</td>
+        <td>4,5</td>
+        <td>4,8</td>
+      </tr>
+    </table>
+    </section>
+  </section>
   
 </div>
 </div>
