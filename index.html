@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/white.css">
 
-  <!-- 🎨 Estilos personalizados -->
   <style>
     body {
       background-color: #f7faf7;
@@ -20,21 +19,10 @@
     }
 
     .reveal p, .reveal li {
-      font-size: 30px;
+      font-size: 28px;
       line-height: 1.4;
     }
 
-    .reveal section img {
-      border-radius: 12px;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.15);
-    }
-     .Reveal.initialize({
-       hash: true,
-         transsition: "fade",
-         transitionSpeed:"slow",
-    backgroundTransition: "fade",
-    slideNumber: true});
-    /* 🎯 Portada */
     .portada {
       text-align: center;
     }
@@ -49,7 +37,6 @@
       color: #555;
     }
 
-    /* 📊 Tablas */
     table {
       width: 100%;
       border-collapse: collapse;
@@ -71,10 +58,27 @@
       background-color: #f1f8f4;
     }
 
-    /* 🎯 Resaltado */
     .destacado {
       color: #1b5e20;
       font-weight: bold;
+    }
+
+    /* 🎯 Contenedor del Excel */
+    .excel-container {
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .excel-container iframe {
+      width: 90%;
+      height: 420px;
+      border: none;
+      border-radius: 12px;
     }
   </style>
 </head>
@@ -90,72 +94,17 @@
   <p style="margin-top:40px;">Mariana De Berti · 2026</p>
 </section>
 
+<!-- 📘 INTRODUCCIÓN -->
 <section>
-  <section>
-    <h3>¿Qué es la simulación de Monte Carlo?</h3>
-    <p>
-      Es una técnica estadística que predice resultados de eventos inciertos
-      mediante <span class="destacado">muestreo aleatorio</span>.
-    </p>
-    <p>
-      Permite evaluar riesgos simulando miles de escenarios posibles.
-    </p>
-  </section>
-
-  <section>
-    <h3>¿En qué se basa?</h3>
-    <ol>
-      <li class="fragment">Definir un modelo matemático del sistema</li>
-      <li class="fragment">Generar variables aleatorias</li>
-      <li class="fragment">Ejecutar el modelo</li>
-      <li class="fragment">Repetir miles de veces</li>
-      <li class="fragment">Analizar la distribución de resultados</li>
-    </ol>
-  </section>
-
-  <section>
-    <h3>¿Para qué se utiliza?</h3>
-    <ul>
-      <li>Evaluar riesgos e incertidumbre</li>
-      <li>Analizar sistemas complejos</li>
-      <li>Estimar probabilidades</li>
-      <li>Optimizar decisiones</li>
-    </ul>
-  </section>
+  <h3>¿Qué es la simulación de Monte Carlo?</h3>
+  <p>
+    Es una técnica estadística que predice resultados de eventos inciertos
+    mediante <span class="destacado">muestreo aleatorio</span>.
+  </p>
+  <p>Permite evaluar riesgos simulando miles de escenarios posibles.</p>
 </section>
 
-<section>
-  <h3>Ejemplo</h3>
-  <h4>Óptimo agronómico vs. óptimo económico</h4>
-</section>
-
-<section>
-  <h3>Conceptos clave</h3>
-  <p><b>Óptimo agronómico:</b> dosis que maximiza el rendimiento.</p>
-  <p><b>Óptimo económico:</b> dosis que maximiza la ganancia.</p>
-  <p class="destacado">Más producción ≠ mayor ganancia.</p>
-</section>
-
-<section>
-  <h3>Variables inciertas</h3>
-  <ul>
-    <li>Clima</li>
-    <li>Calidad del suelo</li>
-    <li>Precipitaciones</li>
-    <li>Respuesta del cultivo</li>
-  </ul>
-  <p>No podemos predecir el rendimiento con exactitud.</p>
-</section>
-
-<section>
-  <h3>Objetivo de la simulación</h3>
-  <ul>
-    <li>Estimar rendimiento esperado</li>
-    <li>Encontrar dosis óptima</li>
-    <li>Comparar óptimo agronómico y económico</li>
-  </ul>
-</section>
-
+<!-- 📊 TABLA -->
 <section>
   <h3>Dosis de fertilizante en trigo</h3>
   <table>
@@ -171,101 +120,52 @@
   <p>Se simulan valores aleatorios dentro de estos rangos.</p>
 </section>
 
+<!-- 📈 GIF -->
 <section>
-  <section>
-    <h3>Simulación de escenarios</h3>
-    <p>Se simulan 10 años agrícolas posibles.</p>
-  </section>
-
-  <section>
-    <table>
-      <tr>
-        <th>Escenario</th>
-        <th>50 kg</th>
-        <th>100 kg</th>
-        <th>150 kg</th>
-        <th>200 kg</th>
-      </tr>
-      <tr><td>1</td><td>3.1</td><td>4.2</td><td>4.3</td><td>4.0</td></tr>
-      <tr><td>2</td><td>2.9</td><td>3.7</td><td>4.1</td><td>3.8</td></tr>
-      <tr><td>3</td><td>3.5</td><td>4.3</td><td>4.6</td><td>4.3</td></tr>
-      <tr><td>4</td><td>3.0</td><td>3.8</td><td>4.0</td><td>3.9</td></tr>
-      <tr><td>5</td><td>3.2</td><td>4.1</td><td>4.5</td><td>4.2</td></tr>
-      <tr><td>6</td><td>2.8</td><td>3.6</td><td>3.9</td><td>3.7</td></tr>
-      <tr><td>7</td><td>3.4</td><td>4.4</td><td>4.7</td><td>4.5</td></tr>
-      <tr><td>8</td><td>3.3</td><td>4.0</td><td>4.3</td><td>4.0</td></tr>
-      <tr><td>9</td><td>3.0</td><td>3.9</td><td>4.2</td><td>3.9</td></tr>
-      <tr><td>10</td><td>3.6</td><td>4.5</td><td>4.8</td><td>4.6</td></tr>
-    </table>
-  </section>
-</section>
-
- <section>
   <h3>Distribución de resultados simulados</h3>
-  <div style="
-      background:#ffffff;
-      padding:20px;
-      border-radius:16px;
-      box-shadow:0 8px 20px rgba(0,0,0,0.1);
-      display:inline-block;">
+  <div style="background:#ffffff;padding:20px;border-radius:16px;box-shadow:0 8px 20px rgba(0,0,0,0.1);display:inline-block;">
     <img src="Graficomontecarlo.gif" style="max-width: 520px;">
   </div>
 </section>
 
+<!-- 📊 EXCEL EMBEBIDO -->
 <section>
-  <h3>Rendimiento promedio</h3>
-  <table>
-    <tr><th>Dosis</th><th>Rendimiento promedio</th></tr>
-    <tr><td>50 kg</td><td>3.18 tn/ha</td></tr>
-    <tr><td>100 kg</td><td>4.05 tn/ha</td></tr>
-    <tr><td>150 kg</td><td>4.35 tn/ha</td></tr>
-  </table>
-</section>
-
-<section>
-  <section>
-    <h3>Análisis del riesgo</h3>
-    <ul>
-      <li>La dosis de 150 kg tiene mayor rendimiento promedio</li>
-      <li>El mayor costo aumenta el riesgo si el rendimiento baja</li>
-    </ul>
-    <p>Monte Carlo evalúa promedio <span class="destacado">y riesgo</span>.</p>
-  </section>
-
-  <section>
-    <h3>Conclusión</h3>
-    <ul>
-      <li>Considera variabilidad climática</li>
-      <li>Permite estimar ganancias</li>
-      <li>Evalúa riesgos económicos</li>
-    </ul>
-    <p class="destacado">
-      La mejor decisión equilibra ganancia y riesgo.
-    </p>
-  </section>
-</section>
-  <section>
+  <h3>Simulación en Excel</h3>
+  <div class="excel-container">
     <iframe
-      src="https://1drv.ms/x/c/3f1e3f6f38805ff1/IQA93usNPchiSagaQEA9fs9HATaRFuZRWKP5ChN4uw0eS0w?e=Phoiz1"
-      width="100%"
-      heigth="500"
-      frameborder="0">
+      src="https://1drv.ms/x/c/3f1e3f6f38805ff1/IQQ93usNPchiSagaQEA9fs9HATK8TIq7mGxw12JM6XWU-60?wdAllowInteractivity=False&wdHideHeaders=True&wdInConfigurator=True&wdInConfigurator=True"
+      scrolling="no">
     </iframe>
-    <section>
+  </div>
+  <p style="font-size:18px; margin-top:15px;">
+    Hoja de cálculo utilizada para generar variables aleatorias y analizar escenarios.
+  </p>
+  <a href="montecarlo.xlsx" download>Descargar Excel</a>
+</section>
+
+<!-- 📚 FUENTES -->
 <section>
-  <h3> Fuentes</h3>
+  <h3>Fuentes</h3>
   <ul>
-    <li> IBM - Monte Carlo Simulation</li>
-    <li>Alfonso Manuel Mancilla Herrera - Números aleatorios. Historia, teoria y aplicaciones </li>
-    <li>Ing. Agr. Angel Berardo - Fertilidad del suelo y uso de fertilizantes</li>
+    <li>IBM - Monte Carlo Simulation</li>
+    <li>Alfonso Manuel Mancilla Herrera - Números aleatorios</li>
+    <li>Ing. Agr. Angel Berardo - Fertilidad del suelo</li>
   </ul>
 </section>
+
 </div>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.js"></script>
 <script>
-Reveal.initialize({ hash: true });
+  Reveal.initialize({
+    hash: true,
+    transition: "fade",
+    transitionSpeed: "slow",
+    backgroundTransition: "fade",
+    slideNumber: true
+  });
 </script>
+
 </body>
 </html>
