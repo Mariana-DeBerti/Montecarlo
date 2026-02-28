@@ -7,16 +7,12 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/white.css">
 
-  <!-- 🎨 Estilos personalizados -->
   <style>
-    body {
-      background-color: #f7faf7;
-    }
+    body { background-color: #f7faf7; }
 
-    .reveal h1, .reveal h2, .reveal h3, .reveal h4 {
+    .reveal h1, .reveal h2, .reveal h3 {
       color: #2e7d32;
       font-weight: 600;
-      letter-spacing: 0.5px;
     }
 
     .reveal p, .reveal li {
@@ -24,37 +20,10 @@
       line-height: 1.4;
     }
 
-    .reveal section img {
-      border-radius: 12px;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.15);
-    }
-     .Reveal.initialize({
-       hash: true,
-         transsition: "fade",
-         transitionSpeed:"slow",
-    backgroundTransition: "fade",
-    slideNumber: true});
-    /* 🎯 Portada */
-    .portada {
-      text-align: center;
-    }
+    .destacado { color: #1b5e20; font-weight: bold; }
 
-    .portada h1 {
-      font-size: 64px;
-      margin-bottom: 10px;
-    }
+    .cita { font-size: 0.7em; color: #555; }
 
-    .portada p {
-      font-size: 26px;
-      color: #555;
-    }
-
-    /* 📊 Tablas */
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 20px;
-    }
     /* Botón */
     .reveal .slides a.button{
       background-color: #2b7cff !important;
@@ -65,33 +34,19 @@
       display: inline-block;
       font-weight: 600;
       box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-      transition: transform .2s, box-shadow .2s;
-    }
-    .reveal .slides a.button:hover{
-      transform: translateY(-2px);
-      box-shadow: 0 6px 14px rgba(0,0,0,0.25);
     }
 
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 20px;
+    }
     th, td {
       border: 1px solid #c8e6c9;
       padding: 10px;
       text-align: center;
     }
-
-    th {
-      background-color: #e8f5e9;
-      color: #1b5e20;
-    }
-
-    tr:nth-child(even) {
-      background-color: #f1f8f4;
-    }
-
-    /* 🎯 Resaltado */
-    .destacado {
-      color: #1b5e20;
-      font-weight: bold;
-    }
+    th { background-color: #e8f5e9; }
   </style>
 </head>
 
@@ -99,180 +54,139 @@
 <div class="reveal">
 <div class="slides">
 
-<!-- 🎯 PORTADA -->
-<section class="portada">
+<!-- PORTADA -->
+<section>
   <h1>Simulación de Monte Carlo</h1>
-  <p style="margin-top:40px;">Mariana De Berti · 2026</p>
+  <p>Mariana De Berti · 2026</p>
 </section>
 
 <section>
-  <section>
-    <h3>¿Qué es la simulación de Monte Carlo?</h3>
-    <p>
-      Es una técnica estadística que predice resultados de eventos inciertos
-      mediante <span class="destacado">muestreo aleatorio</span>.
-    </p>
-    <p>
-      Permite evaluar riesgos simulando miles de escenarios posibles.
-    </p>
-  </section>
-
-  <section>
-    <h3>¿En qué se basa?</h3>
-    <ol>
-      <li class="fragment">Definir un modelo matemático del sistema</li>
-      <li class="fragment">Generar variables aleatorias</li>
-      <li class="fragment">Ejecutar el modelo</li>
-      <li class="fragment">Repetir miles de veces</li>
-      <li class="fragment">Analizar la distribución de resultados</li>
-    </ol>
-  </section>
-
-  <section>
-    <h3>¿Para qué se utiliza?</h3>
-    <ul>
-      <li>Evaluar riesgos e incertidumbre</li>
-      <li>Analizar sistemas complejos</li>
-      <li>Estimar probabilidades</li>
-      <li>Optimizar decisiones</li>
-    </ul>
-  </section>
+  <h3>¿Qué es la simulación de Monte Carlo?</h3>
+  <p>
+    Técnica estadística que predice resultados inciertos mediante
+    <span class="destacado">muestreo aleatorio</span>.
+    <span class="cita">(IBM, 2023)</span>
+  </p>
+  <p>Permite evaluar riesgos simulando múltiples escenarios.</p>
 </section>
 
 <section>
-  <h3>Ejemplo</h3>
-  <h4>Óptimo agronómico vs. óptimo económico</h4>
+  <h3>¿Para qué se utiliza?</h3>
+  <ul>
+    <li>Evaluar riesgos e incertidumbre</li>
+    <li>Estimar probabilidades</li>
+    <li>Optimizar decisiones</li>
+  </ul>
 </section>
 
 <section>
-  <h3>Conceptos clave</h3>
-  <p><b>Óptimo agronómico:</b> dosis que maximiza el rendimiento.</p>
-  <p><b>Óptimo económico:</b> dosis que maximiza la ganancia.</p>
-  <p class="destacado">Más producción ≠ mayor ganancia.</p>
+  <h3>Ejemplo: fertilización en trigo</h3>
+  <p>Comparación entre óptimo agronómico y económico.</p>
 </section>
 
 <section>
   <h3>Variables inciertas</h3>
   <ul>
     <li>Clima</li>
-    <li>Calidad del suelo</li>
     <li>Precipitaciones</li>
     <li>Respuesta del cultivo</li>
   </ul>
-  <p>No podemos predecir el rendimiento con exactitud.</p>
 </section>
 
 <section>
-  <h3>Objetivo de la simulación</h3>
-  <ul>
-    <li>Estimar rendimiento esperado</li>
-    <li>Encontrar dosis óptima</li>
-    <li>Comparar óptimo agronómico y económico</li>
-  </ul>
-</section>
-
-<section>
-  <h3>Dosis de fertilizante en trigo</h3>
+  <h3>Rangos de rendimiento</h3>
   <table>
-    <tr>
-      <th>Dosis (kg/ha)</th>
-      <th>Rendimiento esperado (tn/ha)</th>
-    </tr>
-    <tr><td>50</td><td>2.0 – 2.2</td></tr>
-    <tr><td>100</td><td>2.9 – 3.2</td></tr>
-    <tr><td>150</td><td>3.8 – 4.0</td></tr>
-    <tr><td>200</td><td>3.5 – 3.8</td></tr>
+    <tr><th>Dosis</th><th>Rango (tn/ha)</th></tr>
+    <tr><td>50 kg</td><td>2.0 – 2.2</td></tr>
+    <tr><td>100 kg</td><td>2.9 – 3.2</td></tr>
+    <tr><td>150 kg</td><td>3.8 – 4.0</td></tr>
+    <tr><td>200 kg</td><td>3.5 – 3.8</td></tr>
   </table>
-  <p>Se simulan valores aleatorios dentro de estos rangos.</p>
+</section>
+
+<!-- METODOLOGÍA -->
+<section>
+  <h3>Metodología de simulación</h3>
+  <ol>
+    <li>Definir rangos de rendimiento</li>
+    <li>Generar valores aleatorios en Excel</li>
+    <li>Simular 10 campañas agrícolas</li>
+    <li>Calcular promedios</li>
+    <li>Analizar riesgo</li>
+  </ol>
+</section>
+
+<!-- CÁLCULOS -->
+<section>
+  <h3>Cálculo del rendimiento promedio</h3>
+  <p><strong>Ejemplo dosis 150 kg:</strong></p>
+  <p>(4.3 + 4.1 + 4.6 + 4.0 + 4.5 + 3.9 + 4.7 + 4.3 + 4.2 + 4.8) / 10</p>
+  <p>= <strong>4.35 tn/ha</strong></p>
 </section>
 
 <section>
-  <section>
-    <h3>Simulación de escenarios</h3>
-    <p>Se simulan 10 años agrícolas posibles.</p>
-  </section>
-
-  <section>
-    <table>
-      <tr>
-        <th>Escenario</th>
-        <th>50 kg</th>
-        <th>100 kg</th>
-        <th>150 kg</th>
-        <th>200 kg</th>
-      </tr>
-      <tr><td>1</td><td>3.1</td><td>4.2</td><td>4.3</td><td>4.0</td></tr>
-      <tr><td>2</td><td>2.9</td><td>3.7</td><td>4.1</td><td>3.8</td></tr>
-      <tr><td>3</td><td>3.5</td><td>4.3</td><td>4.6</td><td>4.3</td></tr>
-      <tr><td>4</td><td>3.0</td><td>3.8</td><td>4.0</td><td>3.9</td></tr>
-      <tr><td>5</td><td>3.2</td><td>4.1</td><td>4.5</td><td>4.2</td></tr>
-      <tr><td>6</td><td>2.8</td><td>3.6</td><td>3.9</td><td>3.7</td></tr>
-      <tr><td>7</td><td>3.4</td><td>4.4</td><td>4.7</td><td>4.5</td></tr>
-      <tr><td>8</td><td>3.3</td><td>4.0</td><td>4.3</td><td>4.0</td></tr>
-      <tr><td>9</td><td>3.0</td><td>3.9</td><td>4.2</td><td>3.9</td></tr>
-      <tr><td>10</td><td>3.6</td><td>4.5</td><td>4.8</td><td>4.6</td></tr>
-    </table>
-  </section>
-</section>
-<section>
-  <ul>
-    <p><b>Simulación de resultados aleatorios</p></b>
-  <p><b> Ulizando la función =aleatorio() de Excel y condicionandola al rendimiento máximo de cada dosis</p></b>
-  </ul>
-    <iframe 
-      width="100%" height="475" 
-      frameborder="0" scrolling="no" 
-      src="https://1drv.ms/x/c/3f1e3f6f38805ff1/IQQ93usNPchiSagaQEA9fs9HATK8TIq7mGxw12JM6XWU-60?wdAllowInteractivity=False&wdHideHeaders=True&wdInConfigurator=True&wdInConfigurator=True">
-      </iframe>
-  <p><a href="Mntecarlo1.xlsx" download>Descargar Excel</a></p>
-  </section>
-<section>
-  <h3>Rendimiento promedio</h3>
+  <h3>Resultados promedio</h3>
   <table>
     <tr><th>Dosis</th><th>Rendimiento promedio</th></tr>
-    <tr><td>50 kg</td><td>3.18 tn/ha</td></tr>
-    <tr><td>100 kg</td><td>4.05 tn/ha</td></tr>
-    <tr><td>150 kg</td><td>4.35 tn/ha</td></tr>
+    <tr><td>50 kg</td><td>3.18</td></tr>
+    <tr><td>100 kg</td><td>4.05</td></tr>
+    <tr><td>150 kg</td><td>4.35</td></tr>
   </table>
 </section>
 
+<!-- PROCEDIMIENTO EXCEL -->
 <section>
-  <section>
-    <h3>Análisis del riesgo</h3>
-    <ul>
-      <li>La dosis de 150 kg tiene mayor rendimiento promedio</li>
-      <li>El mayor costo aumenta el riesgo si el rendimiento baja</li>
-    </ul>
-    <p>Monte Carlo evalúa promedio <span class="destacado">y riesgo</span>.</p>
-  </section>
-
-  <section>
-    <h3>Conclusión</h3>
-    <ul>
-      <li>Considera variabilidad climática</li>
-      <li>Permite estimar ganancias</li>
-      <li>Evalúa riesgos económicos</li>
-    </ul>
-    <p class="destacado">
-      La mejor decisión equilibra ganancia y riesgo.
-    </p>
-  </section>
-</section>
-  
-<section>
-  <h3> Fuentes</h3>
+  <h3>Procedimiento en Excel</h3>
   <ul>
-    <li> IBM - Monte Carlo Simulation</li>
-    <li>Alfonso Manuel Mancilla Herrera - Números aleatorios. Historia, teoria y aplicaciones </li>
-    <li>Ing. Agr. Angel Berardo - Fertilidad del suelo y uso de fertilizantes<a href="https://www.ibm.com/es-es/think/topics/monte-carlo-simulation" target="_blank" class="button">Ver informe</a></li>
+    <li>Uso de función <strong>=ALEATORIO()</strong></li>
+    <li>Escalado a rangos de rendimiento</li>
+    <li>Promedio con <strong>=PROMEDIO()</strong></li>
   </ul>
 </section>
+
+<section>
+  <h3>Archivo de simulación</h3>
+  <iframe width="100%" height="450"
+    src="https://1drv.ms/x/c/3f1e3f6f38805ff1/IQQ93usNPchiSagaQEA9fs9HATK8TIq7mGxw12JM6XWU-60?wdAllowInteractivity=False&wdHideHeaders=True">
+  </iframe>
+</section>
+
+<section>
+  <h3>Análisis del riesgo</h3>
+  <ul>
+    <li>150 kg → mayor rendimiento esperado</li>
+    <li>Mayor costo implica mayor riesgo</li>
+  </ul>
+  <p class="destacado">Monte Carlo evalúa promedio y variabilidad.</p>
+</section>
+
+<section>
+  <h3>Conclusión</h3>
+  <ul>
+    <li>Considera incertidumbre climática</li>
+    <li>Permite estimar resultados futuros</li>
+    <li>Apoya decisiones bajo riesgo</li>
+  </ul>
+</section>
+
+<!-- FUENTES -->
+<section>
+  <h3>Fuentes</h3>
+  <ul>
+    <li>IBM (2023). Monte Carlo Simulation.
+      <a href="https://www.ibm.com/es-es/think/topics/monte-carlo-simulation" target="_blank" class="button">Ver artículo</a>
+    </li>
+    <li>Mancilla Herrera, A. M. Números aleatorios: teoría y aplicaciones.</li>
+    <li>Berardo, A. Fertilidad del suelo y uso de fertilizantes.</li>
+  </ul>
+</section>
+
 </div>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.js"></script>
 <script>
-Reveal.initialize({ hash: true });
+Reveal.initialize({ hash: true, transition: "fade" });
 </script>
 </body>
 </html>
